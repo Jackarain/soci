@@ -16,6 +16,9 @@
     <Filter Include="empty">
       <UniqueIdentifier>{1a6ad1b3-54d0-46ac-902a-336e0a9eb8f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="pq">
+      <UniqueIdentifier>{455b816e-3a3e-4669-8ef0-b380441b6572}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\backend-loader.cpp">
@@ -101,6 +104,39 @@
     </ClCompile>
     <ClCompile Include="core\connection-parameters.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\factory.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\row-id.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\session.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\standard-into-type.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\standard-use-type.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\statement.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\vector-into-type.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\vector-use-type.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\blob.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\common.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\error.cpp">
+      <Filter>pq</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
