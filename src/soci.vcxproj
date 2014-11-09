@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{34822E9D-4502-4FFF-A1DA-DA47404845AF}</ProjectGuid>
+    <RootNamespace>soci</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;.\core;.\backends\empty;.\backends\sqlite3;..\..\database\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.\core;.\backends\empty;.\backends\sqlite3;..\..\database\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="backends\empty\blob.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\empty\factory.cpp" />
+    <ClCompile Include="backends\empty\row-id.cpp" />
+    <ClCompile Include="backends\empty\session.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\empty\standard-into-type.cpp" />
+    <ClCompile Include="backends\empty\standard-use-type.cpp" />
+    <ClCompile Include="backends\empty\statement.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\empty\vector-into-type.cpp" />
+    <ClCompile Include="backends\empty\vector-use-type.cpp" />
+    <ClCompile Include="core\backend-loader.cpp" />
+    <ClCompile Include="core\blob.cpp" />
+    <ClCompile Include="core\connection-parameters.cpp" />
+    <ClCompile Include="core\connection-pool.cpp" />
+    <ClCompile Include="core\error.cpp" />
+    <ClCompile Include="core\into-type.cpp" />
+    <ClCompile Include="core\once-temp-type.cpp" />
+    <ClCompile Include="core\prepare-temp-type.cpp" />
+    <ClCompile Include="core\procedure.cpp" />
+    <ClCompile Include="core\ref-counted-prepare-info.cpp" />
+    <ClCompile Include="core\ref-counted-statement.cpp" />
+    <ClCompile Include="core\row.cpp" />
+    <ClCompile Include="core\rowid.cpp" />
+    <ClCompile Include="core\session.cpp" />
+    <ClCompile Include="core\soci-simple.cpp" />
+    <ClCompile Include="core\statement.cpp" />
+    <ClCompile Include="core\transaction.cpp" />
+    <ClCompile Include="core\use-type.cpp" />
+    <ClCompile Include="core\values.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="backends\empty\soci-empty.h" />
+    <CustomBuild Include="core\backend-loader.h" />
+    <ClInclude Include="core\blob-exchange.h" />
+    <ClInclude Include="core\blob.h" />
+    <ClInclude Include="core\boost-fusion.h" />
+    <ClInclude Include="core\boost-gregorian-date.h" />
+    <ClInclude Include="core\boost-optional.h" />
+    <ClInclude Include="core\boost-tuple.h" />
+    <ClInclude Include="core\connection-parameters.h" />
+    <ClInclude Include="core\connection-pool.h" />
+    <ClInclude Include="core\error.h" />
+    <ClInclude Include="core\exchange-traits.h" />
+    <ClInclude Include="core\into-type.h" />
+    <ClInclude Include="core\into.h" />
+    <ClInclude Include="core\once-temp-type.h" />
+    <ClInclude Include="core\prepare-temp-type.h" />
+    <ClInclude Include="core\procedure.h" />
+    <ClInclude Include="core\ref-counted-prepare-info.h" />
+    <ClInclude Include="core\ref-counted-statement.h" />
+    <ClInclude Include="core\row-exchange.h" />
+    <ClInclude Include="core\row.h" />
+    <ClInclude Include="core\rowid-exchange.h" />
+    <ClInclude Include="core\rowid.h" />
+    <ClInclude Include="core\rowset.h" />
+    <ClInclude Include="core\session.h" />
+    <ClInclude Include="core\soci-backend.h" />
+    <ClInclude Include="core\soci-config.h" />
+    <ClInclude Include="core\soci-platform.h" />
+    <ClInclude Include="core\soci-simple.h" />
+    <ClInclude Include="core\soci.h" />
+    <ClInclude Include="core\statement.h" />
+    <ClInclude Include="core\transaction.h" />
+    <ClInclude Include="core\type-conversion-traits.h" />
+    <ClInclude Include="core\type-conversion.h" />
+    <ClInclude Include="core\type-holder.h" />
+    <ClInclude Include="core\type-ptr.h" />
+    <ClInclude Include="core\unsigned-types.h" />
+    <ClInclude Include="core\use-type.h" />
+    <ClInclude Include="core\use.h" />
+    <ClInclude Include="core\values-exchange.h" />
+    <ClInclude Include="core\values.h" />
+    <ClInclude Include="core\version.h" />
+    <ClInclude Include="soci_backends_config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\database\sqlite\sqlite.vcxproj">
+      <Project>{2d30cb89-3af2-4148-afed-b7d165ba8437}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

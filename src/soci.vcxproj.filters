@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="empty">
+      <UniqueIdentifier>{1a6ad1b3-54d0-46ac-902a-336e0a9eb8f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\backend-loader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\blob.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\connection-pool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\error.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\into-type.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\once-temp-type.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\prepare-temp-type.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\procedure.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ref-counted-prepare-info.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ref-counted-statement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\row.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\rowid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\session.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\soci-simple.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\statement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\transaction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\use-type.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\values.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\empty\blob.cpp">
+      <Filter>empty</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\empty\factory.cpp">
+      <Filter>empty</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\empty\row-id.cpp">
+      <Filter>empty</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\empty\session.cpp">
+      <Filter>empty</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\empty\standard-into-type.cpp">
+      <Filter>empty</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\empty\standard-use-type.cpp">
+      <Filter>empty</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\empty\statement.cpp">
+      <Filter>empty</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\empty\vector-into-type.cpp">
+      <Filter>empty</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\empty\vector-use-type.cpp">
+      <Filter>empty</Filter>
+    </ClCompile>
+    <ClCompile Include="core\connection-parameters.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\blob-exchange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\blob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\boost-fusion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\boost-gregorian-date.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\boost-optional.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\boost-tuple.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\connection-pool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\exchange-traits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\into-type.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\into.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\once-temp-type.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\prepare-temp-type.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\procedure.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ref-counted-prepare-info.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ref-counted-statement.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\row-exchange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\row.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\rowid-exchange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\rowid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\rowset.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\session.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\soci-backend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\soci-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\soci-platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\soci-simple.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\soci.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="soci_backends_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\statement.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\transaction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\type-conversion-traits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\type-conversion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\type-holder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\type-ptr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\unsigned-types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\use-type.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\use.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\values-exchange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\values.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backends\empty\soci-empty.h">
+      <Filter>empty</Filter>
+    </ClInclude>
+    <ClInclude Include="core\connection-parameters.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="core\backend-loader.h">
+      <Filter>头文件</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
