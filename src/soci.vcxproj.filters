@@ -24,13 +24,7 @@
     <ClCompile Include="core\backend-loader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="core\blob.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="core\connection-pool.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="core\error.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="core\into-type.cpp">
@@ -57,13 +51,7 @@
     <ClCompile Include="core\rowid.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="core\session.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="core\soci-simple.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="core\statement.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="core\transaction.cpp">
@@ -73,6 +61,24 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="core\values.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\connection-parameters.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\common.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="core\session.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\statement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\blob.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\error.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="backends\empty\blob.cpp">
@@ -102,8 +108,35 @@
     <ClCompile Include="backends\empty\vector-use-type.cpp">
       <Filter>empty</Filter>
     </ClCompile>
-    <ClCompile Include="core\connection-parameters.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="backends\postgresql\blob.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\error.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\factory.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\row-id.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\session.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\standard-into-type.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\standard-use-type.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\statement.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\vector-into-type.cpp">
+      <Filter>pq</Filter>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\vector-use-type.cpp">
+      <Filter>pq</Filter>
     </ClCompile>
     <ClCompile Include="backends\postgresql\factory.cpp">
       <Filter>pq</Filter>
@@ -265,6 +298,12 @@
     </ClInclude>
     <ClInclude Include="core\connection-parameters.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backends\postgresql\soci-postgresql.h">
+      <Filter>pq</Filter>
+    </ClInclude>
+    <ClInclude Include="backends\postgresql\common.h">
+      <Filter>pq</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <ProjectGuid>{34822E9D-4502-4FFF-A1DA-DA47404845AF}</ProjectGuid>
     <RootNamespace>soci</RootNamespace>
     <Keyword>Win32Proj</Keyword>
@@ -73,60 +74,137 @@
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="backends\empty\factory.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="backends\empty\row-id.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="backends\empty\session.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="backends\empty\standard-into-type.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="backends\empty\standard-use-type.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="backends\empty\statement.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="backends\empty\vector-into-type.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="backends\empty\vector-use-type.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="backends\postgresql\blob.cpp" />
-    <ClCompile Include="backends\postgresql\common.cpp" />
-    <ClCompile Include="backends\postgresql\error.cpp" />
-    <ClCompile Include="backends\postgresql\factory.cpp" />
-    <ClCompile Include="backends\postgresql\row-id.cpp" />
-    <ClCompile Include="backends\postgresql\session.cpp" />
-    <ClCompile Include="backends\postgresql\standard-into-type.cpp" />
-    <ClCompile Include="backends\postgresql\standard-use-type.cpp" />
-    <ClCompile Include="backends\postgresql\statement.cpp" />
-    <ClCompile Include="backends\postgresql\vector-into-type.cpp" />
-    <ClCompile Include="backends\postgresql\vector-use-type.cpp" />
+    <ClCompile Include="backends\postgresql\blob.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\common.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\error.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\factory.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\row-id.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\session.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\standard-into-type.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\standard-use-type.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\statement.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\vector-into-type.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="backends\postgresql\vector-use-type.cpp">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/pq/</XMLDocumentationFileName>
+    </ClCompile>
     <ClCompile Include="core\backend-loader.cpp" />
     <ClCompile Include="core\blob.cpp" />
     <ClCompile Include="core\connection-parameters.cpp" />
@@ -149,10 +227,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="backends\empty\soci-empty.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <CustomBuild Include="core\backend-loader.h" />
+    <ClInclude Include="backends\postgresql\common.h" />
+    <ClInclude Include="backends\postgresql\soci-postgresql.h" />
     <ClInclude Include="core\blob-exchange.h" />
     <ClInclude Include="core\blob.h" />
     <ClInclude Include="core\boost-fusion.h" />
