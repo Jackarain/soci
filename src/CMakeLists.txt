@@ -14,13 +14,14 @@ cmake_minimum_required(VERSION 2.8.0 FATAL_ERROR)
 
 set(PROJECT_NAME soci)
 
+set(SOCI_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 ###############################################################################
 # SOCI CMake modules
 ###############################################################################
 
 # Path to additional CMake modules
-set(CMAKE_MODULE_PATH ${SOCI_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
-set(CMAKE_MODULE_PATH ${SOCI_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
 
 include(SociUtilities)
 
