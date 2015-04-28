@@ -33,14 +33,14 @@ void ensureConnected(session_backend * backEnd)
 } // namespace anonymous
 
 session::session()
-    : once(this), prepare(this), query_transformation_(NULL), logStream_(NULL),
+    : once(this), prepare(this), logStream_(NULL),
       uppercaseColumnNames_(false), backEnd_(NULL),
       isFromPool_(false), pool_(NULL)
 {
 }
 
 session::session(connection_parameters const & parameters)
-    : once(this), prepare(this), query_transformation_(NULL), logStream_(NULL),
+    : once(this), prepare(this), logStream_(NULL),
       lastConnectParameters_(parameters),
       uppercaseColumnNames_(false), backEnd_(NULL),
       isFromPool_(false), pool_(NULL)
@@ -50,7 +50,7 @@ session::session(connection_parameters const & parameters)
 
 session::session(backend_factory const & factory,
     std::string const & connectString)
-    : once(this), prepare(this), query_transformation_(NULL), logStream_(NULL),
+    : once(this), prepare(this), logStream_(NULL),
       lastConnectParameters_(factory, connectString),
       uppercaseColumnNames_(false), backEnd_(NULL),
       isFromPool_(false), pool_(NULL)
@@ -60,7 +60,7 @@ session::session(backend_factory const & factory,
 
 session::session(std::string const & backendName,
     std::string const & connectString)
-    : once(this), prepare(this), query_transformation_(NULL), logStream_(NULL),
+    : once(this), prepare(this), logStream_(NULL),
       lastConnectParameters_(backendName, connectString),
       uppercaseColumnNames_(false), backEnd_(NULL),
       isFromPool_(false), pool_(NULL)
@@ -69,7 +69,7 @@ session::session(std::string const & backendName,
 }
 
 session::session(std::string const & connectString)
-    : once(this), prepare(this), query_transformation_(NULL), logStream_(NULL),
+    : once(this), prepare(this), logStream_(NULL),
       lastConnectParameters_(connectString),
       uppercaseColumnNames_(false), backEnd_(NULL),
       isFromPool_(false), pool_(NULL)
@@ -78,7 +78,7 @@ session::session(std::string const & connectString)
 }
 
 session::session(connection_pool & pool)
-    : query_transformation_(NULL), logStream_(NULL), isFromPool_(true), pool_(&pool)
+    : logStream_(NULL), isFromPool_(true), pool_(&pool)
 {
     poolPosition_ = pool.lease();
     session & pooledSession = pool.at(poolPosition_);
@@ -96,7 +96,6 @@ session::~session()
     }
     else
     {
-        delete query_transformation_;
         delete backEnd_;
     }
 }
@@ -222,7 +221,7 @@ std::string session::get_query() const
     else
     {
         // preserve logical constness of get_query,
-        // stream used as read-only here, 
+        // stream used as read-only here,
         session* pthis = const_cast<session*>(this);
 
         // sole place where any user-defined query transformation is applied
@@ -235,7 +234,7 @@ std::string session::get_query() const
 }
 
 void session::set_query_transformation_(
-        std::auto_ptr<details::query_transformation_function> qtf)
+        boost::shared_ptr<details::query_transformation_function> qtf)
 {
     if (isFromPool_)
     {
@@ -243,8 +242,7 @@ void session::set_query_transformation_(
     }
     else
     {
-        delete query_transformation_;
-        query_transformation_= qtf.release();
+        query_transformation_= qtf;
     }
 }
 

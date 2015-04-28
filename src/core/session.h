@@ -14,7 +14,7 @@
 
 // std
 #include <cstddef>
-#include <memory>
+#include <boost/shared_ptr.hpp>
 #include <ostream>
 #include <sstream>
 #include <string>
@@ -40,7 +40,7 @@ class SOCI_DECL session
 {
 private:
 
-    void set_query_transformation_(std::auto_ptr<details::query_transformation_function> qtf);
+    void set_query_transformation_(boost::shared_ptr<details::query_transformation_function> qtf);
 
 public:
     session();
@@ -77,7 +77,7 @@ public:
     template <typename T>
     void set_query_transformation(T callback)
     {
-        std::auto_ptr<details::query_transformation_function> qtf(new details::query_transformation<T>(callback));
+        boost::shared_ptr<details::query_transformation_function> qtf(new details::query_transformation<T>(callback));
         set_query_transformation_(qtf);
 
         assert(qtf.get() == NULL);
@@ -127,7 +127,7 @@ private:
     session& operator=(session const &);
 
     std::ostringstream query_stream_;
-    details::query_transformation_function* query_transformation_;
+    boost::shared_ptr<details::query_transformation_function> query_transformation_;
 
     std::ostream * logStream_;
     std::string lastQuery_;

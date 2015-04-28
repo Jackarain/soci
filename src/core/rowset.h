@@ -8,6 +8,8 @@
 #ifndef SOCI_ROWSET_H_INCLUDED
 #define SOCI_ROWSET_H_INCLUDED
 
+#include <boost/shared_ptr.hpp>
+
 #include "statement.h"
 // std
 #include <iterator>
@@ -48,9 +50,9 @@ public:
         // Fetch first row to properly initialize iterator
         ++(*this);
     }
-    
+
     // Access operators
-    
+
     reference operator*() const
     {
         return (*define_);
@@ -60,13 +62,13 @@ public:
     {
         return &(operator*());
     }
-    
+
     // Iteration operators
 
     rowset_iterator & operator++()
     {
         // Fetch next row from dataset
-        
+
         if (st_->fetch() == false)
         {
             // Set iterator to non-derefencable state (pass-the-end)
@@ -154,8 +156,8 @@ private:
 
     unsigned int refs_;
 
-    const std::auto_ptr<statement> st_;
-    const std::auto_ptr<T> define_;
+    const boost::shared_ptr<statement> st_;
+    const boost::shared_ptr<T> define_;
 
     // Non-copyable
     rowset_impl(rowset_impl const &);
@@ -179,7 +181,7 @@ public:
     typedef T value_type;
     typedef rowset_iterator<T> iterator;
     typedef rowset_iterator<T> const_iterator;
-    
+
     // this is a conversion constructor
     rowset(details::prepare_temp_type const& prep)
         : pimpl_(new details::rowset_impl<T>(prep))
@@ -222,7 +224,7 @@ public:
 
         return pimpl_->begin();
     }
-    
+
     const_iterator end() const
     {
         assert(0 != pimpl_);
