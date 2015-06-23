@@ -48,4 +48,4 @@ boost_report_value(SOCI_POSTGRESQL_NOPARAMS)
 boost_report_value(SOCI_POSTGRESQL_NOBINDBYNAME)
 boost_report_value(SOCI_POSTGRESQL_NOPREPARE)
 
-add_subdirectory(test)
+target_include_directories(soci_postgresql_static PUBLIC ${Boost_INCLUDE_DIRS})

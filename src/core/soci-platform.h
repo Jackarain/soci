@@ -26,7 +26,9 @@
 
 // Define if you have the snprintf variants.
 #define HAVE_SNPRINTF 1
+#if _MSC_VER < 1900
 #define snprintf _snprintf
+#endif
 
 // Define if you have the strtoll and strtoull variants.
 #if _MSC_VER >= 1300
